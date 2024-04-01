@@ -66,7 +66,7 @@ title_list = load_movie_titles('resources/data/movies.csv')
 
 # Data Loading
 
-title_list = load_movie_titles('https://raw.githubusercontent.com/FM1-UNSUPERVISED-TEAM/Data/main/movies.csv')
+title_list = load_movie_titles('https://github.com/BuhleNonjojo/2309_Unsupervised_FM1')
 
 st.set_page_config(page_icon='resources/imgs/MovieWhiz.png', page_title= 'MovieWhiz', layout='wide',initial_sidebar_state='auto')
 
