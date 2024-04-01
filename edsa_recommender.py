@@ -55,7 +55,9 @@ from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
 from scipy import sparse
 
+
 # Custom Libraries
+
 from utils.data_loader import load_movie_titles
 from recommenders.collaborative_based import collab_model
 from recommenders.content_based import content_model
@@ -65,13 +67,6 @@ from recommenders.content_based import content_model
 title_list = load_movie_titles('resources/data/movies.csv')
 
 # Data Loading
-
-csv_url = "https://raw.githubusercontent.com/BuhleNonjojo/2309_Unsupervised_FM1/main/path/to/movies.csv"  # Replace with the correct path
-df = pd.read_csv(csv_url)
-
-title_list = load_movie_titles('https://github.com/BuhleNonjojo/2309_Unsupervised_FM1')
-
-st.set_page_config(page_icon='resources/imgs/MovieWhiz.png', page_title= 'MovieWhiz', layout='wide',initial_sidebar_state='auto')
 
 over_theme = {'txc_inactive': '#FFFFFF'}
 
