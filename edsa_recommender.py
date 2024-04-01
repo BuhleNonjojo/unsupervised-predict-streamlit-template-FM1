@@ -66,6 +66,9 @@ title_list = load_movie_titles('resources/data/movies.csv')
 
 # Data Loading
 
+csv_url = "https://raw.githubusercontent.com/BuhleNonjojo/2309_Unsupervised_FM1/main/path/to/movies.csv"  # Replace with the correct path
+df = pd.read_csv(csv_url)
+
 title_list = load_movie_titles('https://github.com/BuhleNonjojo/2309_Unsupervised_FM1')
 
 st.set_page_config(page_icon='resources/imgs/MovieWhiz.png', page_title= 'MovieWhiz', layout='wide',initial_sidebar_state='auto')
