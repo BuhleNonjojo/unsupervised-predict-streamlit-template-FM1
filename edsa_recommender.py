@@ -54,7 +54,6 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
 from scipy import sparse
-from streamlit_player import st_playerS
 
 # Custom Libraries
 from utils.data_loader import load_movie_titles
@@ -707,7 +706,7 @@ def main():
         col2.header('Telephone')
         col2.write('(+27) 727910473')
         col3.header('Email')
-        col3.write('simon.blanco@synergysolution.com')
+        col3.write('.com')
         
         
         # ---- CONTACT ----
