@@ -115,7 +115,7 @@ def main():
 
     # DO NOT REMOVE the 'Recommender System' option below, however,
     # you are welcome to add more options to enrich your app.
-    page_options = ["Recommender System", "Solution Overview", "Analytics", "Sneak Peek", "Our Story", "About Us", "Contact Us"]
+    page_options = ["Recommender System", "Solution Overview", "Analytics", "Sneak Peek", "Our Story", "Contact Us"]
 
 
     # -------------------------------------------------------------------
@@ -694,7 +694,7 @@ def main():
         
 #About Us Page---------------------------------------------------------------------------------------------------
 
-    if page_selection == "About Us":
+    if page_selection == "Our Story":
         st.title("About Us")
         
         st.markdown("We are a company that is dedicated to providing advanced analytics solutions. We aim not only to leverage advanced analytics, artificial intelligence, and machine learning, Our target is to also transform industries, drive innovation, and shape a data-driven future")
@@ -740,7 +740,7 @@ def main():
         with st.container():
             image_column, text_column = st.columns((1, 2))
             with image_column:
-                Ghaalib = Image.open("resources/imgs/20240401_223016.jpg")
+                Ndumiso = Image.open("resources/imgs/20240401_223016.jpg")
                 st.image(Ndumiso)
             with text_column:
                     st.subheader("Data Scientist: Ndumiso Luthuli")
@@ -748,7 +748,7 @@ def main():
         with st.container():
             image_column, text_column = st.columns((1, 2))
             with image_column:
-                Edna = Image.open("")
+                Nontokozo = Image.open("")
                 st.image(Nontokozo)
             with text_column:
                 st.subheader("Coordinator: Nontokozo Dube")
@@ -756,7 +756,7 @@ def main():
         with st.container():
             image_column, text_column = st.columns((1, 2))
             with image_column:
-                Tshepo = Image.open("resources/imgs/IMG_E0027.JPG")
+                Siyabonga = Image.open("resources/imgs/IMG_E0027.JPG")
                 st.image(Siyabonga)
                 with text_column:
                     st.subheader("Data Scientist: Siyabonga Mkhize")
@@ -764,7 +764,7 @@ def main():
         with st.container():
             image_column, text_column = st.columns((1, 2))
             with image_column:
-                Koketso = Image.open("resources/imgs/IMG_4040.jpg")
+                Patience = Image.open("resources/imgs/IMG_4040.jpg")
                 st.image(Patience)
                 with text_column:
                     st.subheader("Feature Engineer: Patience Msimango")
