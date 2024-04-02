@@ -237,7 +237,8 @@ def main():
         st.info('Welcome to Codenest (PTY) LTD ')
         
         visual_options = ["Analytics", "Raw Data", "Movies Genres", "Movies Ratings", "Top Users", "Movies Releases Per Year", "Contents of Movies Data", "Duration Of Movies", "Movies Budget", "Model Performance"]
-        visual_options_selection = st.sidebar.radio("Selectons") ("Which visual category would you like to choose?",
+        visual_options_selection = st.sidebar.radio("Selections", ("Analytics", "Raw Data", "Movies Genres", "Movies Ratings", "Top Users", "Movies Releases Per Year", "Contents of Movies Data", "Duration Of Movies", "Movies Budget", "Model Performance" ))  # Correct
+        ("Which visual category would you like to choose?",
 		visual_options)
         
         if visual_options_selection == "Insights":
