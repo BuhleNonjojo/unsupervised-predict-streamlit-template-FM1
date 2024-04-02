@@ -110,7 +110,7 @@ Budget = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_l5o1uey5.
 Performance = load_lottieurl("https://lottie.host/a3be8d01-63d0-4b44-b0fa-820597e7287b/E2WCCMuj8o.json")
 star = load_lottieurl("https://lottie.host/b8d1b7e4-452b-42ba-8afe-0942e0c7a635/DDMa55hCg6.json")
 
-local_css("resources/style/style.css")
+local_css("resources/style.css")
 
 # App declaration
 def main():
