@@ -819,9 +819,7 @@ def main():
             st.title("Directions To The Main Office")
               # Construct the Google Maps embed code with the new location
               # Construct the Google Maps embed code with the new location
-            google_maps_embed_code = f
-            """<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.4376091292775!2d{longitude}!3d{latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e957c1b0b92f18f%3A0x8f7f03b8b0e27d03!2s53+Grace+Ave%2C+Murrayfield%2C%20Pretoria%2C%20South+Africa!5e0!3m2!1sen!2sza!4v1689921462377!5m2!1sen!2sza" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            """
+            google_maps_embed_code = """<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.4376091292775!2d{longitude}!3d{latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e957c1b0b92f18f%3A0x8f7f03b8b0e27d03!2s53+Grace+Ave%2C+Murrayfield%2C%20Pretoria%2C%20South+Africa!5e0!3m2!1sen!2sza!4v1689921462377!5m2!1sen!2sza" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"""
             st.components.v1.html(google_maps_embed_code, width=1400, height=400)
         #call the function
         map = main()
