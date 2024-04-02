@@ -230,7 +230,7 @@ def main():
     # or to provide your business pitch.
 
 
-# ----------------------------------------------EDA SECTION---------------------------------------------------------------------------------------------------
+# EDA SECTION---------------------------------------------------------------------------------------------------
    	# Building out the Visualizations page
     if page_selection == "Analytics":
         st.title("Exploratory Data Analysis")
