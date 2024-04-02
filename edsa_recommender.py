@@ -115,7 +115,7 @@ def main():
 
     # DO NOT REMOVE the 'Recommender System' option below, however,
     # you are welcome to add more options to enrich your app.
-    page_options = ["Recommender System", "Analytics", "Solution Overview", "Sneak Peek", "Our Story", "Contact Us"]
+    page_options = ["Recommender System", "Solution Overview", "Analytics", "Sneak Peek", "Our Story", "Contact Us"]
 
 
     # -------------------------------------------------------------------
@@ -173,24 +173,26 @@ def main():
     # ------------- SAFE FOR ALTERING/EXTENSION -------------------
     if page_selection == "Solution Overview":
         st.title("Solution Overview")
+        st.info('Welcome to Codenest (PTY) LTD ')
         st.write("Describe your winning approach on this page")
     
         st.markdown("""Recommender systems (RecSys) have become a cornerstone of online experiences. From e-commerce giants like Amazon to social media platforms like Facebook, these algorithms power personalized suggestions for products, content, and connections.
         However, as RecSys grow in sophistication and the scale of user data explodes, so too do the computational demands.  This increased complexity highlights the crucial role of RecSys in enhancing user experience and driving engagement.
-        At its core, a RecSys is a machine learning model trained to understand user preferences and product characteristics. It analyzes vast amounts of user interaction data, including clicks, likes, purchases, and even browsing behavior. By leveraging this data, RecSys can filter through overwhelming information overload, recommending relevant content and products to individual users.
-        This ability to hyper-personalize recommendations makes RecSys a goldmine for content providers and retailers.  Imagine: automatically connecting users with everything from their next favorite book to the perfect pair of shoes.  No wonder these systems are a favorite tool for driving targeted sales and engagement.
-        The increasing adoption of RecSys signifies the growing importance of machine learning expertise within companies. Aspiring data scientists who can build and optimize these powerful systems are in high demand.
-        In fact, at Explore Data Science Academy (EDSA), we tasked our team with building a RecSys. This project provided hands-on experience with two core approaches: Content-Based Filtering and Collaborative Filtering.
+        At its core, a RecSys is a machine learning model trained to understand user preferences and product characteristics. It analyzes vast amounts of user interaction data, including clicks, likes, purchases, and even browsing behavior. By leveraging this data, RecSys can filter through overwhelming information overload, recommending relevant content and products to individual users.""")
+        st.markdown("""This ability to hyper-personalize recommendations makes RecSys a goldmine for content providers and retailers.  Imagine: automatically connecting users with everything from their next favorite book to the perfect pair of shoes.  No wonder these systems are a favorite tool for driving targeted sales and engagement.
+        The increasing adoption of RecSys signifies the growing importance of machine learning expertise within companies. Aspiring data scientists who can build and optimize these powerful systems are in high demand.""")
+        st.markdown("""In fact, at Explore Data Science Academy (EDSA), we tasked our team with building a RecSys. This project provided hands-on experience with two core approaches: Content-Based Filtering and Collaborative Filtering.
         By understanding these techniques, data scientists can contribute to the next generation of personalized recommendations, shaping the future of online interactions.
-            """)
+           """)
+        
         RecSys=Image.open("resources/imgs/RecSys.png")
         st.image(RecSys, use_column_width=False)
 
         # Collaborative Based Filtering
         st.subheader("**Collaborative Filtering**")
         st.markdown("""Collaborative filtering algorithms recommend items (this is the filtering part) based on preference information from many users (this is the collaborative part).
-        This approach uses similarity of user preference behavior,  given previous interactions between users and items, recommender algorithms learn to predict future interaction. 
-        These recommender systems build a model from a user’s past behavior, such as items purchased previously or ratings given to those items and similar decisions by other users.
+        This approach uses similarity of user preference behavior,  given previous interactions between users and items, recommender algorithms learn to predict future interaction.""")
+        st.markdown("""These recommender systems build a model from a user’s past behavior, such as items purchased previously or ratings given to those items and similar decisions by other users.
         The idea is that if some people have made similar decisions and purchases in the past, like a movie choice, then there is a high probability they will agree on additional future selections.
         For example, if a collaborative filtering recommender knows you and another user share similar tastes in movies, it might recommend a movie to you that it knows this other user already likes. """)
 
@@ -201,7 +203,8 @@ def main():
         st.subheader("**Content Based Filtering**")
         st.markdown("""Content filtering, by contrast, uses the attributes or features of an item  (this is the content part) to recommend other items similar to the user’s preferences. This approach is 
         based on similarity of items and user features,  given information about a user and items they have interacted with, (e.g. a user’s demographics, like age or gender, the category of a restaurant’s 
-        cuisine, the average review for a movie), model the likelihood of a new interaction.  For example, if a content filtering recommender sees you liked the movies “You’ve Got Mail” and “Sleepless in 
+        cuisine, the average review for a movie), model the likelihood of a new interaction.""")
+        st.markdown("""For example, if a content filtering recommender sees you liked the movies “You’ve Got Mail” and “Sleepless in 
         Seattle,” it might recommend another movie to you with the same genres and/or cast, such as “Joe Versus the Volcano.”""")
 
         ConFil=Image.open("resources/imgs/ConFil2.png")
@@ -209,17 +212,16 @@ def main():
 
         st.subheader("**Building the Recommender Sytem**")
         st.markdown("""The recommender system application was built mainly for consumers to have a personalized experience of watching movies that they are
-        likely to enjoy based on the three movies they have selected. The figure below shows the recommender app that uses both content based filtering and also collaborative based filtering. 
-        Our app is similar to it in a sence that it uses the same algorithms to make predictions but it was built very different from it. From the 'recommender system' page, three movies are required as input in order to make recommendations based on which movie you have inputed in the seelction box.""")
+        likely to enjoy based on the three movies they have selected. The figure below shows the recommender app that uses both content based filtering and also collaborative based filtering.""")
+        st.markdown("""Our app is similar to it in a sence that it uses the same algorithms to make predictions but it was built very different from it. From the 'recommender system' page, three movies are required as input in order to make recommendations based on which movie you have inputed in the seelction box.""")
 
 
         image=Image.open("resources/imgs/PickAMovie.png")
         st.image(image, use_column_width=False)
 
         st.markdown("""In building this web application, a couple of steps were followed starting with forking the repository from Github given by EDSA,
-         using the dataset provided and obtained from the repository to build the recommender system. Following that was working with the script of the
-         collaborative filtering algorithm by editing the code to obtain a movie prediction when using the main script run with streamlit. The about
-         us has a link to the Github repo for if the intention is to attain better grasp on how the code works using python code.
+         using the dataset provided and obtained from the repository to build the recommender system..""")
+        st.markdown("""Following that was working with the script of the collaborative filtering algorithm by editing the code to obtain a movie prediction when using the main script run with streamlit. The aboutus has a link to the Github repo for if the intention is to attain better grasp on how the code works using python code.
             """)
 
         st.markdown("""This recommender engine is considered to be user friendly and one can easily use it to get movies that others have enjoyed and are
@@ -232,9 +234,10 @@ def main():
    	# Building out the Visualizations page
     if page_selection == "Analytics":
         st.title("Exploratory Data Analysis")
+        st.info('Welcome to Codenest (PTY) LTD ')
         
-        visual_options = ["Insights", "Raw Data", "Movies Genres", "Movies Ratings", "Top Users", "Movies Releases Per Year", "Contents of Movies Data", "Duration Of Movies", "Movies Budget", "Model Performance"]
-        visual_options_selection = st.selectbox("Which visual category would you like to choose?",
+        visual_options = ["Analytics", "Raw Data", "Movies Genres", "Movies Ratings", "Top Users", "Movies Releases Per Year", "Contents of Movies Data", "Duration Of Movies", "Movies Budget", "Model Performance"]
+        visual_options_selection = st.sidebar.radio("Selectons", options) ("Which visual category would you like to choose?",
 		visual_options)
         
         if visual_options_selection == "Insights":
@@ -652,7 +655,7 @@ def main():
 # ----------------------------------------------trailers---------------------------------------------------------------------------------------------------
     
     # embed a youtube video
-    if page_selection == "Trailers":
+    if page_selection == "Sneak Peek":
 
         st.header("Top 10 movies")
         year = st.slider('Select Release Year Period', 2023, 2018, 2023)
@@ -698,7 +701,7 @@ def main():
         col2.header('Telephone')
         col2.write('(+27) 727910473')
         col3.header('Email')
-        col3.write('.com')
+        col3.write('codenest.com')
         
         
         # ---- CONTACT ----
@@ -708,7 +711,7 @@ def main():
 
         # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
         contact_form = """
-        <form action="https://formsubmit.co/tshepoelifa238@gmail.com" method="POST">
+        <form action="https://formsubmit.co/nonjojoo.buhle@gmail.com" method="POST">
             <input type="hidden" name="_captcha" value="false">
             <input type="text" name="name" placeholder="Your name" required>
             <input type="email" name="email" placeholder="Your email" required>
@@ -744,11 +747,6 @@ def main():
 #-----------------------------------------About Us Page---------------------------------------------------------------------------------------------------
 
     if page_selection == "About Us":
-        
-        #-------------------------------------
-        
-        #------------------------------------
-        
         st.title("About Us")
         
         st.markdown("We are a company that is dedicated to providing advanced analytics solutions. We aim not only to leverage advanced analytics, artificial intelligence, and machine learning, Our target is to also transform industries, drive innovation, and shape a data-driven future")
@@ -819,7 +817,7 @@ def main():
             image_column, text_column = st.columns((1, 2))
             with image_column:
                 Koketso = Image.open("resources/imgs/IMG_4040.jpg")
-                st.image(Koketso)
+                st.image(Patienced)
                 with text_column:
                     st.subheader("Feature Engineer: Patience Msimango")
                     st.write("With a solid foundation in statistics, mathematics, and programming, koketso utilizes her expertise to analyze data and develop innovative feature engineering strategies. Off the clock, she immerses herself in the world of books. Koketso is an avid reader who devours literature from various genres.")
