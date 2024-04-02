@@ -110,14 +110,19 @@ Budget = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_l5o1uey5.
 Performance = load_lottieurl("https://lottie.host/a3be8d01-63d0-4b44-b0fa-820597e7287b/E2WCCMuj8o.json")
 star = load_lottieurl("https://lottie.host/b8d1b7e4-452b-42ba-8afe-0942e0c7a635/DDMa55hCg6.json")
 
-local_css("resources/style.css")
-
 # App declaration
 def main():
 
     # DO NOT REMOVE the 'Recommender System' option below, however,
     # you are welcome to add more options to enrich your app.
-    page_options = ["Recommender System", "Analytics", "Solution Overview", "Sneak Peek", "Our Story", "Contact Us"]
+    page_options = ["Home" ,"Recommender System", "Analytics", "Solution Overview", "Sneak Peek", "Our Story", "Contact Us"]
+
+# ----------------------------------------------HOME PAGE---------------------------------------------------------------------------------------------------
+    page_selection = st.sidebar.selectbox("Choose Option", page_options)
+    if page_selection == "Home":
+        # Header contents
+        st.write('# Welcome to Codenest')
+        st.image('resources/imgs/FM1 .png',use_column_width=True)
 
     # -------------------------------------------------------------------
     # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
@@ -228,15 +233,10 @@ def main():
     # You may want to add more sections here for aspects such as an EDA,
     # or to provide your business pitch.
 
-# ----------------------------------------------HOME PAGE---------------------------------------------------------------------------------------------------
-    # if page_selection == 'Home':
-    #     # Header contents
-    #     st.write('# Welcome to MovieWhiz')
-    #     st.image('resources/imgs/1MovieWhiz.png')
 
 # ----------------------------------------------EDA SECTION---------------------------------------------------------------------------------------------------
    	# Building out the Visualizations page
-    if page_selection == "Insights":
+    if page_selection == "Analytics":
         st.title("Exploratory Data Analysis")
         
         visual_options = ["Insights", "Raw Data", "Movies Genres", "Movies Ratings", "Top Users", "Movies Releases Per Year", "Contents of Movies Data", "Duration Of Movies", "Movies Budget", "Model Performance"]
