@@ -115,14 +115,8 @@ def main():
 
     # DO NOT REMOVE the 'Recommender System' option below, however,
     # you are welcome to add more options to enrich your app.
-    page_options = ["Home" ,"Recommender System", "Analytics", "Solution Overview", "Sneak Peek", "Our Story", "Contact Us"]
+    page_options = ["Recommender System", "Analytics", "Solution Overview", "Sneak Peek", "Our Story", "Contact Us"]
 
-# ----------------------------------------------HOME PAGE---------------------------------------------------------------------------------------------------
-    page_selection = st.sidebar.selectbox("Choose Option", page_options)
-    if page_selection == "Home":
-        # Header contents
-        st.write('# Welcome to Codenest')
-        st.image('resources/imgs/FM1 .png',use_column_width=True)
 
     # -------------------------------------------------------------------
     # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
