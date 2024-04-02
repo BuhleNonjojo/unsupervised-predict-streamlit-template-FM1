@@ -115,7 +115,7 @@ def main():
 
     # DO NOT REMOVE the 'Recommender System' option below, however,
     # you are welcome to add more options to enrich your app.
-    page_options = ["Recommender System", "Solution Overview", "Analytics", "Sneak Peek", "Our Story", "Contact Us"]
+    page_options = ["Recommender System", "Solution Overview", "Analytics", "Sneak Peek", "Our Story", "About Us", "Contact Us"]
 
 
     # -------------------------------------------------------------------
@@ -237,7 +237,7 @@ def main():
         st.info('Welcome to Codenest (PTY) LTD ')
         
         visual_options = ["Analytics", "Raw Data", "Movies Genres", "Movies Ratings", "Top Users", "Movies Releases Per Year", "Contents of Movies Data", "Duration Of Movies", "Movies Budget", "Model Performance"]
-        visual_options_selection = st.sidebar.radio("Selectons", options) ("Which visual category would you like to choose?",
+        visual_options_selection = st.sidebar.radio("Selectons") ("Which visual category would you like to choose?",
 		visual_options)
         
         if visual_options_selection == "Insights":
@@ -252,7 +252,7 @@ def main():
 				width=700,
 				key=None,
 			)
-#------------------------------------------------------------------------------------------------------------------------------------------------
+
         if visual_options_selection == "Model Performance":
             
             if visual_options_selection == "Model Performance":
@@ -277,7 +277,6 @@ def main():
                 st.image('https://i.imgur.com/8cHPlxM.png', width=730)
                 st.write("We implemented a few models for Both the collaborative and content-based filtering to find a model that gives us the best rmse score which is a representation of our model performance. The model with the best rmse score was the singular value decomposition (SVD). The SVD is very good at noise detection and does this by reducing the dimensions of a matrix in order to make certain subsequent matrix calculations simpler, which is why it gave better RSME score. By the Implementation of Singular Value Decomposition, which returned a very good score of 0.779  we can conclude that the algorithm implemented for our app is very good at movie recommendations.We implemented a few models for Both the collaborative and content-based filtering to find a model that gives us the best rmse score which is a representation of our model performance. The model with the best rmse score was the singular value decomposition (SVD). The SVD is very good at noise detection and does this by reducing the dimensions of a matrix in order to make certain subsequent matrix calculations simpler, which is why it gave better RSME score. By the Implementation of Singular Value Decomposition, which returned a very good score of 0.779  we can conclude that the algorithm implemented for our app is very good at movie recommendations.")
 
-#------------------------------------------------------------------------------------------------------------------------------------------------
 # The 'Movies Genres' Page   
         if visual_options_selection == "Movies Genres":
             
@@ -573,8 +572,8 @@ def main():
                 st.write("Observations:")
                 st.write("Genre Budget Comparison: The bar chart allows the compare of the average budgets of different genres directly. We can identify genres with higher budgets and those with lower budgets, giving us an idea of which genres tend to require more significant investments, which in this case is th IMAX followed by Adventure.")
                 st.write("Popular vs. Expensive Genres: By comparing the average budgets with genre popularity, we might identify whether there is a correlation between a genre's popularity and its budget. Some genres may have high budgets due to their appeal to a broader audience, while others might have relatively high budgets despite being less popular. From the 'Most Popular Genre' figure at the top, we showed that Drama is the most popular genre. The insights drawn was that Dramatic movies are cheaper to produce. This is supported by this 'Average Budget per Genre' figure where Drama is shown to have a very low budget.")
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#-----------------------------------------------------------Raw Data-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Raw Data-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         if visual_options_selection == "Raw Data":
             st.title("Raw Data")
             st.write("This page was designed to help data analysts to get a better understanding of the data. It focuses specifically on the movies and ratings datasets.")
@@ -652,7 +651,7 @@ def main():
             )
             st.write(fig)
 
-# ----------------------------------------------trailers---------------------------------------------------------------------------------------------------
+#trailers---------------------------------------------------------------------------------------------------
     
     # embed a youtube video
     if page_selection == "Sneak Peek":
@@ -662,89 +661,37 @@ def main():
         st.write('You selected movies released between', str(2018), 'and', str(year))
         if year == 2023:
             with st.expander('Top 10 Best Movies 2023'):
-                st_player('https://www.youtube.com/watch?v=YQZJinEtFlM')
+                st.video('https://www.youtube.com/watch?v=YQZJinEtFlM')
                 st.write('**Which movies did you like?**')
         
         if year >= 2022:
             with st.expander('Top 10 Best Movies 2022'):
-                st_player('https://www.youtube.com/watch?v=emrUk0cW3O4')
+                st.video('https://www.youtube.com/watch?v=emrUk0cW3O4')
                 st.write('**Which movies did you like?**')
                 
         if year >= 2021:
             with st.expander('Top 10 Best Movies 2021'):
-                st_player('https://www.youtube.com/watch?v=_wRoljeeF5k')
+                st.video('https://www.youtube.com/watch?v=_wRoljeeF5k')
                 st.write('**Which movies did you like?**')
                 
         if year >= 2020:
             with st.expander('Top 10 Best Movies 2020'):
-                st_player('https://www.youtube.com/watch?v=K7AHRF9X1i8')
+                st.video('https://www.youtube.com/watch?v=K7AHRF9X1i8')
                 st.write('**Which movies did you like?**')
                 
         if year >= 2019:
             with st.expander('Top 10 Best Movies 2019'):
-                st_player('https://youtu.be/48NL3N6KMFo?t=9')
+                st.video('https://youtu.be/48NL3N6KMFo?t=9')
                 st.write('**Which movies did you like?**')
                 
         if year >= 2018:
             with st.expander('Top 10 Best Movies 2018'):
-                st_player('https://youtu.be/FkUtWUy77fQ?t=9')
+                st.video('https://youtu.be/FkUtWUy77fQ?t=9')
                 st.write('**Which movies did you like?**')
                 
 
-    #-----------------------------------------------CONTACT US----------------------------------------------------------------------------
-    if page_selection == 'Contact Us':
-        st.header("Get In Touch With Us!")
         
-        col1, col2, col3 = st.columns(3)
-        col1.header('Location')
-        col1.write('523 De Kock ST, Pretoria, 0002')
-        col2.header('Telephone')
-        col2.write('(+27) 727910473')
-        col3.header('Email')
-        col3.write('codenest.com')
-        
-        
-        # ---- CONTACT ----
-        with st.container():
-            st.write("---")
-            st.write("##")
-
-        # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
-        contact_form = """
-        <form action="https://formsubmit.co/nonjojoo.buhle@gmail.com" method="POST">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="text" name="name" placeholder="Your name" required>
-            <input type="email" name="email" placeholder="Your email" required>
-            <textarea name="message" placeholder="Your message here" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-        """
-        left_column, right_column = st.columns(2)
-        with left_column:
-            st.markdown(contact_form, unsafe_allow_html=True)
-        with right_column:
-            st_lottie(
-				Contact_Us,
-				speed=1,
-				reverse=False,
-				loop=True,
-				quality="low",
-				#renderer="svg",
-				height=None,
-				width=None,
-				key=None,
-			)
-        #Loading the google maps
-        def main():
-            st.title("Directions To The Main Office")
-            google_maps_embed_code = """<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.4376091292775!2d28.212081211194214!3d-25.756105445780477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95618dd4b32c81%3A0x86adf140930befdb!2s523%20De%20Kock%20St%2C%20Sunnyside%2C%20Pretoria%2C%200002!5e0!3m2!1sen!2sza!4v1689921462377!5m2!1sen!2sza" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"""
-            st.components.v1.html(google_maps_embed_code, width=1400, height=400)
-        #call the function
-        map = main()
-        #st.write(map)
-
-        
-#-----------------------------------------About Us Page---------------------------------------------------------------------------------------------------
+#About Us Page---------------------------------------------------------------------------------------------------
 
     if page_selection == "About Us":
         st.title("About Us")
@@ -817,12 +764,64 @@ def main():
             image_column, text_column = st.columns((1, 2))
             with image_column:
                 Koketso = Image.open("resources/imgs/IMG_4040.jpg")
-                st.image(Patienced)
+                st.image(Patience)
                 with text_column:
                     st.subheader("Feature Engineer: Patience Msimango")
                     st.write("With a solid foundation in statistics, mathematics, and programming, koketso utilizes her expertise to analyze data and develop innovative feature engineering strategies. Off the clock, she immerses herself in the world of books. Koketso is an avid reader who devours literature from various genres.")
 
-#---------------------------------------END OF EDA Section----------------------------------------------------------------------------------------------------------------------
+
+    #CONTACT US----------------------------------------------------------------------------
+    if page_selection == 'Contact Us':
+        st.header("Get In Touch With Us!")
+        
+        col1, col2, col3 = st.columns(3)
+        col1.header('Location')
+        col1.write('523 De Kock ST, Pretoria, 0002')
+        col2.header('Telephone')
+        col2.write('(+27) 727910473')
+        col3.header('Email')
+        col3.write('codenest.com')
+        
+        
+        # ---- CONTACT ----
+        with st.container():
+            st.write("---")
+            st.write("##")
+
+        # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
+        contact_form = """
+        <form action="https://formsubmit.co/nonjojoo.buhle@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+            <textarea name="message" placeholder="Your message here" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        """
+        left_column, right_column = st.columns(2)
+        with left_column:
+            st.markdown(contact_form, unsafe_allow_html=True)
+        with right_column:
+            st_lottie(
+				Contact_Us,
+				speed=1,
+				reverse=False,
+				loop=True,
+				quality="low",
+				#renderer="svg",
+				height=None,
+				width=None,
+				key=None,
+			)
+        #Loading the google maps
+        def main():
+            st.title("Directions To The Main Office")
+            google_maps_embed_code = """<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.4376091292775!2d28.212081211194214!3d-25.756105445780477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95618dd4b32c81%3A0x86adf140930befdb!2s523%20De%20Kock%20St%2C%20Sunnyside%2C%20Pretoria%2C%200002!5e0!3m2!1sen!2sza!4v1689921462377!5m2!1sen!2sza" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"""
+            st.components.v1.html(google_maps_embed_code, width=1400, height=400)
+        #call the function
+        map = main()
+        #st.write(map)
+
 if __name__ == '__main__':
     main()
 
