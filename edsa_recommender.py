@@ -777,7 +777,7 @@ def main():
         
         col1, col2, col3 = st.columns(3)
         col1.header('Location')
-        col1.write('53 Grace, Pretoria, 0002')
+        col1.write('53 Grace Avenue, Pretoria, 0002')
         col2.header('Telephone')
         col2.write('(+27) 123 456 7890 ')
         col3.header('Email')
@@ -817,7 +817,11 @@ def main():
         #Loading the google maps
         def main():
             st.title("Directions To The Main Office")
-            google_maps_embed_code = """<iframe src="https://www.google.com/maps/embed?/53+Grace+Ave,+Murrayfield,+Pretoria,+0184/@-25.7483003,28.302556,17z/data=!3m1!4b1!4m6!3m5!1s0x1e955fd3db41e299:0xf3456880ad35c7ab!8m2!3d-25.7483004!4d28.3071694!16s%2Fg%2F11j6xcf7t0?hl=en&entry=ttu"></iframe>"""
+              # Construct the Google Maps embed code with the new location
+              # Construct the Google Maps embed code with the new location
+            google_maps_embed_code = f
+            """<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.4376091292775!2d{longitude}!3d{latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e957c1b0b92f18f%3A0x8f7f03b8b0e27d03!2s53+Grace+Ave%2C+Murrayfield%2C%20Pretoria%2C%20South+Africa!5e0!3m2!1sen!2sza!4v1689921462377!5m2!1sen!2sza" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            """
             st.components.v1.html(google_maps_embed_code, width=1400, height=400)
         #call the function
         map = main()
