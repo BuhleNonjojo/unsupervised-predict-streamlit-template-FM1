@@ -748,7 +748,7 @@ def main():
         with st.container():
             image_column, text_column = st.columns((1, 2))
             with image_column:
-                Nontokozo = Image.open("")
+                Nontokozo = Image.open("resources/imgs/226d96d9-b1da-4c94-bc50-28467272dbd4.jpg")
                 st.image(Nontokozo)
             with text_column:
                 st.subheader("Coordinator: Nontokozo Dube")
@@ -777,11 +777,11 @@ def main():
         
         col1, col2, col3 = st.columns(3)
         col1.header('Location')
-        col1.write('523 De Kock ST, Pretoria, 0002')
+        col1.write('53 Grace, Pretoria, 0002')
         col2.header('Telephone')
-        col2.write('(+27) 727910473')
+        col2.write('(+27) 123 456 7890 ')
         col3.header('Email')
-        col3.write('codenest.com')
+        col3.write('contactus@codenest.com')
         
         
         # ---- CONTACT ----
